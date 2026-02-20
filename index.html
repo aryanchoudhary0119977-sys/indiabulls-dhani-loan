@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Indiabulls Dhani - Instant Personal Loans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* Popup Modal */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:9999}
+    .modal.active{display:flex}
+    .modal-box{background:#f2f2f2;padding:25px;width:100%;max-width:420px;border-radius:12px;position:relative}
+    .modal-box h2{margin-top:0}
+    .close-btn{position:absolute;right:12px;top:8px;font-size:22px;cursor:pointer}
+    .form-group{margin-bottom:12px}
+    .form-group input,.form-group select{width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;font-size:14px}
+    .success-msg{display:none;margin-top:10px;padding:10px;border-radius:6px;background:#e7f8ee;color:#0a7b3f;font-weight:600}
+
+    .section{margin:70px auto}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .card img{width:100%;border-radius:10px}
+    .faq-item{margin-bottom:10px}
+    .faq-q{font-weight:700}
+    @media(max-width:768px){
+      .grid-3,.grid-2{grid-template-columns:1fr}
+    }
+
+    /* HERO SLIDER BACKGROUND */
+    .hero{
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.55);
+      z-index:0;
+    }
+    .hero > *{position:relative; z-index:1;}
+    .hero img{max-width:40px;height: 10px; border-radius:5px;}
+    .feature-logo{
+  width: 60px;      /* yahan size chhota/bada karo */
+  height: auto;     /* ratio maintain rahe */
+  margin: 0 auto 10px;
+  display: block;
+}
+
+    /* Floating buttons */
+    .float-call,.float-whatsapp{position:fixed;top:50%;transform:translateY(-50%);z-index:9999}
+    .float-call{left:15px}
+    .float-whatsapp{right:15px}
+    .float-btn{display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:50px;color:#fff;font-weight:bold;text-decoration:none;box-shadow:0 6px 15px rgba(0,0,0,.25);font-size:14px}
+    .call-btn{background:#0a9b2d}
+    .whatsapp-btn{background:#25D366}
+    .float-btn:hover{opacity:.9}
+    @media(max-width:600px){.float-btn span{display:none}}
+  </style>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container nav">
+    <h2>Indiabulls Dhani</h2>
+    <ul class="main-menu__list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="javascript:void(0)" id="openEnquiryNav">Enquiry</a></li>
+    </ul>
+    <a href="javascript:void(0)" class="thm-btn" id="openEnquiryBtn">Apply For Loan</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero container section" id="heroSlider">
+  <div>
+    <h1>Instant Personal Loans, Made Simple</h1>
+    <p>Fast approval, minimal documentation, and quick disbursal directly to your bank account.</p>
+    <a href="javascript:void(0)" class="thm-btn" id="openEnquiryHero">Apply Now</a>
+  </div>
+  <img src="assets/images/hero.jpddg" alt="">
+</section>
+
+<!-- FEATURES -->
+<section class="cards container section">
+  <div class="card">
+    <img src="assets/images/safe1.jpg" class="feature-logo" alt="quick Payment"><p>You can pay online, including loan installments, via various methods like net banking and other options.</p></div>
+  <div class="card"><img src="assets/images/safe2.jpg" class="feature-logo" alt="No Prepayment Fees"><p>No prepayment needed, so you won’t have to worry about any hidden charges in most instances.</p></div>
+  <div class="card"><img src="assets/images/safe3.jpg" class="feature-logo" alt=""><p>A safety-focused process that guarantees secure transactions and protects your personal information.</p></div>
+</section>
+
+<!-- LOAN TYPES -->
+<section class="container section">
+  <h2>Our Loan Services</h2>
+  <p style="max-width:700px; margin:10px 0 30px; color:#555;">
+  We offer reliable and transparent loan solutions designed to meet personal, housing, and business needs with fast approval and secure processing.
+</p>
+<p>We offer reliable, transparent, and customer-focused loan solutions designed to meet personal, housing, and business needs with fast approvals and secure processing.</p>
+  <div class="grid-3">
+    <div class="card">
+      <img src="assets/images/personal-loan.jpg">
+      <h3>Personal Loan</h3>
+      <p>
+  Quick approval personal loans with minimal paperwork, transparent charges, and flexible EMIs. 100% secure process trusted by thousands of customers across India. Get fast approval with minimum documentation.
+</p>
+<small><strong>Professional • Trusted • Fast Approval</strong></small>
+<small style="color:#2d6cdf; font-weight:600;">
+  ✔ Trusted by 10,000+ customers across India
+</small>
+    </div>
+    <div class="card">
+      <img src="assets/images/home-loan.jpg">
+      <h3>Home Loan</h3>
+      <p>
+  Turn your dream of owning a home into reality with our Home Loan solutions. We offer competitive interest rates, flexible tenure options, and a smooth documentation process. Trusted partners ensure safe and transparent disbursal.
+</p>
+<small><strong>Professional • Trusted • Fast Approval</strong></small>
+<small style="color:#4bdf2d; font-weight:600;">
+  ✔ Trusted by 10,000+ customers across India
+</small>
+    </div>
+    <div class="card">
+      <img src="assets/images/business-loan.jpg">
+      <h3>Business Loan</h3>
+      <p>
+  Empower your business growth with our fast and reliable Business Loans. Whether you want to
+  expand operations, manage working capital, or invest in new opportunities, we provide quick
+  funding with flexible repayment options. Our transparent and secure process helps businesses
+  grow with confidence and trust.
+</p>
+<small><strong>Professional • Trusted • Fast Approval</strong></small>
+<small style="color:#df2d36; font-weight:600;">
+  ✔ Trusted by 10,000+ customers across India
+</small>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="container section">
+  <h2>How It Works</h2>
+  <div class="grid-3">
+    <div class="card"><h3>1. Apply Online</h3><p>Fill the form in 1 minute.</p></div>
+    <div class="card"><h3>2. Get Approved</h3><p>Quick verification process.</p></div>
+    <div class="card"><h3>3. Money Credited</h3><p>Direct to your bank.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="container section grid-2">
+  <img src="assets/images/about.jpg" style="width:100%;border-radius:12px">
+  <div>
+    <h2>Why Choose Us?</h2>
+<p>
+  We are a trusted financial service provider committed to making loans simple, fast and secure.
+  Our mission is to empower individuals and businesses with quick access to funds, transparent
+  processes, and reliable customer support.
+</p>
+<ul>
+  <li>✔ Less paperwork & hassle-free process</li>
+  <li>✔ Instant loan approval with fast disbursal</li>
+  <li>✔ 100% secure & encrypted application process</li>
+  <li>✔ Transparent charges, no hidden fees</li>
+  <li>✔ Flexible repayment options</li>
+  <li>✔ 24x7 customer support</li>
+  <li>✔ Trusted by thousands of customers</li>
+  <li>✔ RBI-compliant partners</li>
+    <li>✔ Less paperwork</li>
+      <li>✔ Instant disbursal</li>
+      <li>✔ 100% secure process</li>
+      <li>✔ Support team 24x7</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="container section">
+  <h2>What Our Customers Say</h2>
+  <div class="grid-3">
+    <div class="card">“Great service & fast approval” – Amit</div>
+    <div class="card">“Very smooth process” – Rahul</div>
+    <div class="card">“Helped during emergency” – Neha</div>
+    <div class="card">“Excellent service and very fast approval. The process was smooth and transparent. I received my personal loan within 24 hours. Highly professional team!” –Bijendra Sharma</div>
+    <div class="card">applied for a home loan and the entire documentation process was hassle-free. The team guided me at every step. Truly professional and reliable service.”-Arti Singh</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="container section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-q">Q. How fast is loan approval?</div>
+    <div>A. Usually within few hours.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q. Any prepayment charges?</div>
+    <div>A. No, zero prepayment charges.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q. Is my data safe?</div>
+    <div>A. Yes, we use secure encryption.</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta container section">
+  <h2>Need urgent funds?</h2>
+  <a href="javascript:void(0)" class="thm-btn" id="openEnquiryCta">Apply Now</a>
+</section>
+
+<footer class="site-footer section">
+  <p>©️ 2026 Indiabulls Dhani. All Rights Reserved.</p>
+  <p>Email: info@indibullsdhaniloanfinances.com | Phone: 9999999999</p>
+  <p>Address: C45 Ground Floor Naraina Phase-1, Delhi - 110035</p>
+</footer>
+
+<!-- Popup Modal -->
+<div class="modal" id="enquiryModal">
+  <div class="modal-box">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h2>Loan Enquiry</h2>
+    <p>Fill details and our team will contact you</p>
+
+    <form id="enquiryForm">
+      <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+      <div class="form-group"><input type="tel" placeholder="Mobile Number" required></div>
+      <div class="form-group"><input type="email" placeholder="Email" required></div>
+      <div class="form-group"><input type="number" placeholder="Loan Amount" required></div>
+      <div class="form-group">
+        <select required>
+          <option value="">Select Loan Type</option>
+          <option>Personal Loan</option>
+          <option>Home Loan</option>
+          <option>Business Loan</option>
+        </select>
+      </div>
+      <button type="submit" class="thm-btn" style="width:100%">Submit Enquiry</button>
+      <div class="success-msg" id="successMsg">✅ Thanks! Our team will contact you soon.</div>
+    </form>
+  </div>
+</div>
+
+<!-- Floating Buttons -->
+<div class="float-call">
+  <a href="tel:9999999999" class="float-btn call-btn">📞 <span>Call Now</span></a>
+</div>
+<div class="float-whatsapp">
+  <a href="https://wa.me/919999999999?text=Hello%20I%20want%20a%20loan%20enquiry" target="_blank" class="float-btn whatsapp-btn">💬 <span>WhatsApp</span></a>
+</div>
+
+<script>
+  const modal=document.getElementById("enquiryModal");
+  const openBtns=document.querySelectorAll("#openEnquiryNav,#openEnquiryBtn,#openEnquiryHero,#openEnquiryCta");
+  const closeBtn=document.getElementById("closeModal");
+  const form=document.getElementById("enquiryForm");
+  const successMsg=document.getElementById("successMsg");
+
+  openBtns.forEach(b=>b.onclick=()=>modal.classList.add("active"));
+  closeBtn.onclick=()=>modal.classList.remove("active");
+  modal.onclick=e=>{ if(e.target===modal) modal.classList.remove("active"); }
+
+  form.onsubmit = function(e){
+    e.preventDefault();
+    successMsg.style.display="block";
+    form.reset();
+  }
+
+  /* HERO BACKGROUND SLIDER */
+  const hero = document.getElementById("heroSlider");
+  const heroImages = [
+    "assets/images/hero1.jpg",
+    "assets/images/service2.jpg",
+    "assets/images/hero2.jpg",
+    "assets/images/hero4.jpg"
+  ];
+  let i = 0;
+  function changeHeroBg(){
+    hero.style.backgroundImage = `url('${heroImages[i]}')`;
+    i = (i + 1) % heroImages.length;
+  }
+  changeHeroBg();
+  setInterval(changeHeroBg, 3500);
+</script>
+
+</body>
+</html>

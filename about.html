@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us – Indiabulls Dhani</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Know more about Indiabulls Dhani – trusted partner for instant personal loans with fast approval and transparent process." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+    <h2 style="color:#fff;margin:0;">Indiabulls Dhani</h2>
+    <ul class="main-menu__list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="apply-now.html" class="thm-btn">Apply For Loan</a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <h1>About Indiabulls Dhani</h1>
+      <p>Indiabulls Dhani is a trusted financial services platform committed to delivering fast, transparent, and secure personal, home, and business loan solutions across India. We aim to simplify the borrowing experience by offering quick approvals, minimal documentation, and hassle-free processes designed to meet the diverse financial needs of individuals and small businesses.</p>
+      <p>
+        Indiabulls Dhani is dedicated to providing fast, transparent and secure personal loan solutions.
+        Our mission is to make borrowing simple and stress-free for salaried individuals and small business owners.
+      </p>
+      <p>
+        With minimal documentation and quick approvals, we help you meet urgent financial needs without delay.
+      </p>
+      <p>Our customer-first approach, secure digital platform, and transparent pricing ensure a reliable and professional lending experience for every applicant.</p>
+      <a href="services.html" class="thm-btn">Explore Our Services</a>
+    </div>
+    <img src="assets/images/about.jpg" alt="About Indiabulls Dhani" />
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>Our mission is to empower individuals and small businesses with fast access to funds during critical financial needs. We focus on simplifying the loan journey through technology-driven solutions, minimal paperwork, and quick approvals, ensuring every customer receives a smooth and stress-free borrowing experience.</p>
+    </div>
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>To become one of India’s most trusted digital lending platforms by delivering innovative, reliable, and secure financial solutions. We aim to set new benchmarks in transparency, customer satisfaction, and service excellence across the lending ecosystem.</p>
+    </div>
+    <div class="card">
+      <h3>Why Choose Us</h3>
+      <p>Fast approvals, transparent pricing, secure digital processes, and customer-first support. With flexible repayment options and a trusted service framework, we make borrowing simple, reliable, and professional for every customer.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <h2>Ready to get started?</h2>
+      <p>Apply online and get funds quickly in your bank account.</p>
+    </div>
+    <a href="apply-now.html" class="thm-btn">Apply Now</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>
+    ©️ 2026 Indiabulls Dhani. All Rights Reserved. <br/>
+    Email: info@indibullsdhaniloanfinances.com | Phone: 9999999999 <br/>
+    Address: C45, Ground Floor, Naraina Phase-1, Naraina, Delhi – 110035
+  </p>
+</footer>
+
+<!-- ✅ FORM SUBMIT SUCCESS SCRIPT (COMMON FOR ALL PAGES) -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("applyForm");
+    const successMsg = document.getElementById("successMsg");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // page reload roke
+        if (successMsg) {
+          successMsg.style.display = "block";
+        } else {
+          alert("✅ Application submitted successfully! Our team will contact you shortly.");
+        }
+        form.reset(); // form clear
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

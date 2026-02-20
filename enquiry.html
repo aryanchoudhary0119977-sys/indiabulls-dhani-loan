@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Enquiry – Indiabulls Dhani</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #e5e7eb; /* gray background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Modal */
+    .modal {
+      background: #fff;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      padding: 24px 22px 26px;
+      position: relative;
+      animation: pop .2s ease-out;
+    }
+
+    @keyframes pop {
+      from { transform: scale(.95); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    .modal h2 {
+      margin: 0 0 6px;
+      text-align: center;
+      color: #111827;
+    }
+    .modal p {
+      margin: 0 0 16px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .form-group { margin-bottom: 12px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      color: #374151;
+      margin-bottom: 4px;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #fbbf24; /* yellow focus */
+      box-shadow: 0 0 0 2px rgba(251,191,36,.2);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #fbbf24; /* yellow button */
+      color: #111;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .submit-btn:hover { filter: brightness(.95); }
+
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #6b7280;
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: 20px 10px 10px;
+      color: #065f46;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay">
+  <div class="modal">
+    <button class="close-btn" onclick="goHome()">×</button>
+
+    <h2>Loan Enquiry</h2>
+    <p>Fill details and our team will contact you</p>
+
+    <!-- 🔁 Apna Formspree link yahan lagana -->
+    <form id="enquiryForm" 
+          action="https://formspree.io/f/xxxxabcd" 
+          method="POST" 
+          target="hidden_iframe"
+          onsubmit="handleSubmit()">
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="10 digit number" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label>Loan Amount</label>
+        <input type="number" name="amount" placeholder="e.g. 50000" required>
+      </div>
+
+      <div class="form-group">
+        <label>Loan Type</label>
+        <select name="loan_type" required>
+          <option value="">Select loan type</option>
+          <option value="Personal Loan">Personal Loan</option>
+          <option value="Home Loan">Home Loan</option>
+          <option value="Business Loan">Business Loan</option>
+          <option value="Other Loan">Other Loan</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Enquiry</button>
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <div id="successMsg" class="success">
+      ✅ Enquiry submitted! We will contact you shortly.
+    </div>
+  </div>
+</div>
+
+<script>
+  function handleSubmit() {
+    setTimeout(() => {
+      document.getElementById("enquiryForm").style.display = "none";
+      document.getElementById("successMsg").style.display = "block";
+    }, 800);
+  }
+
+  function goHome() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

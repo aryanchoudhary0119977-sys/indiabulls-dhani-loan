@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Apply Now – Indiabulls Dhani</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    .form-box{max-width:520px;margin:80px auto;padding:25px;background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+    .form-box h2{text-align:center;margin-bottom:20px}
+    .form-group{margin-bottom:12px}
+    .form-group input,.form-group select{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px}
+    .success-box{display:none;max-width:520px;margin:80px auto;padding:30px;border-radius:12px;background:#e8f7ee;color:#0a7b3f;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+  
+  </style>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+    <h2 style="color:#fff;margin:0;">Indiabulls Dhani</h2>
+    <a href="index.html" class="thm-btn">Go to Home</a>
+  </div>
+</header>
+
+<!-- FORM -->
+<div class="form-box" id="applyFormBox">
+  <h2>Apply for Instant Loan</h2>
+  <form id="applyForm">
+    <div class="form-group">
+      <input type="text" placeholder="Full Name" required>
+    </div>
+    <div class="form-group">
+      <input type="tel" placeholder="Mobile Number" required>
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <input type="number" placeholder="Loan Amount" required>
+    </div>
+    <div class="form-group">
+      <select required>
+        <option value="">Select Purpose</option>
+        <option>Personal Loan</option>
+        <option>Home Loan</option>
+        <option>Business Loan</option>
+      </select>
+    </div>
+    <button type="submit" class="thm-btn" style="width:100%">Submit Application</button>
+  </form>
+</div>
+
+<!-- SUCCESS -->
+<div class="success-box" id="successBox">
+  <h2>🎉 Application Submitted!</h2>
+  <p>Your loan application has been received successfully.</p>
+  <p>Our team will contact you shortly.</p>
+  <p id="timer">Redirecting back to Apply Form in 4 seconds...</p>
+  <a href="apply-now.html" class="thm-btn">Apply Again</a>
+</div>
+
+<footer class="site-footer">
+  <p>
+    ©️ 2026 Indiabulls Dhani. All Rights Reserved. <br/>
+    Email: info@indibullsdhaniloanfinances.com | Phone: 9999999999 <br/>
+    Address: C45, Ground Floor, Naraina Phase-1, Delhi – 110035
+  </p>
+</footer>
+
+<script>
+  const form = document.getElementById("applyForm");
+  const formBox = document.getElementById("applyFormBox");
+  const successBox = document.getElementById("successBox");
+  const timerText = document.getElementById("timer");
+
+  form.onsubmit = function(e){
+    e.preventDefault();
+
+    // show success
+    formBox.style.display = "none";
+    successBox.style.display = "block";
+
+    let sec = 4;
+    timerText.innerText = "Redirecting back to Apply Form in " + sec + " seconds...";
+
+    const countdown = setInterval(() => {
+      sec--;
+      timerText.innerText = "Redirecting back to Apply Form in " + sec + " seconds...";
+      if(sec <= 0){
+        clearInterval(countdown);
+        window.location.href = "apply-now.html"; // reload form
+      }
+    }, 1000);
+  };
+</script>
+
+</body>
+</html>
