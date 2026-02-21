@@ -1,20 +1,3 @@
-/* ===== Mobile hero background fix (for #heroSlider) ===== */
-@media (max-width: 768px) {
-  #heroSlider {
-    min-height: 85vh;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    bacground-color:#000;
-  }
-}
-/* Desktop mode on mobile fix */
-@media (max-width: 1024px) {
-  #heroSlider {
-    background-size: cover !important;
-    background-position: center center !important;
-  }
-}
 /* ===== MOBILE FIX (ONLY RESPONSIVE, NO DESIGN CHANGE) ===== */
 @media (max-width: 768px) {
 
