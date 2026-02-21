@@ -124,3 +124,8 @@ img{max-width:100%;display:block}
 @media(max-width:600px){
   .float-btn span{display:none}
 }
+@media (max-width: 768px){
+  .main-header .thm-btn{
+    display: none !important;
+  }
+}
