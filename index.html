@@ -72,21 +72,25 @@
 
 <header class="main-header">
   <div class="container nav">
-    <h2 class="logo">Indiabulls Dhani</h2>
+    <h2>Indiabulls Dhani</h2>
 
     <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">☰</div>
+    <div class="menu-toggle" onclick="document.querySelector('.main-menu__list').classList.toggle('active')">
+      ☰
+    </div>
 
-    <!-- Menu -->
-    <ul class="main-menu__list" id="mobileMenu">
+    <ul class="main-menu__list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="enquiry.html">Enquiry</a></li>
-      <li><a href="javascript:void(0)" class="thm-btn mobile-apply" id="openEnquiryBtn">Apply For Loan</a></li>
+      <li><a href="javascript:void(0)" id="openEnquiryNav">Enquiry</a></li>
     </ul>
+
+    <a href="javascript:void(0)" class="thm-btn" id="openEnquiryBtn">Apply For Loan</a>
+  </div>
+</header>
 
     <!-- Desktop button -->
     <a href="javascript:void(0)" class="thm-btn desktop-apply" id="openEnquiryBtnDesktop">Apply For Loan</a>
@@ -306,5 +310,6 @@
 </body>
 
 </html>
+
 
 
