@@ -153,12 +153,7 @@ img{max-width:100%;display:block}
   body {
     overflow-x: hidden;
   }
- /* Header fix */
-  .main-header .nav {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
+
 
   .thm-btn {
     display: inline-block;
