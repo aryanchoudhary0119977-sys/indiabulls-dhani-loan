@@ -136,6 +136,7 @@ img{max-width:100%;display:block}
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
+    bacground-color:#000;
   }
 }
 /* Desktop mode on mobile fix */
