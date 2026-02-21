@@ -129,3 +129,19 @@ img{max-width:100%;display:block}
     display: none !important;
   }
 }
+/* ===== Mobile hero background fix (for #heroSlider) ===== */
+@media (max-width: 768px) {
+  #heroSlider {
+    min-height: 85vh;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* Desktop mode on mobile fix */
+@media (max-width: 1024px) {
+  #heroSlider {
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+}
