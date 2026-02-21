@@ -254,3 +254,82 @@ section {
     padding: 0 12px;
   }
 }
+/* ===== MOBILE FIX (ONLY RESPONSIVE, NO DESIGN CHANGE) ===== */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Header fix */
+  .main-header .nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .main-menu__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .thm-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero fix */
+  .hero {
+    min-height: auto !important;
+    padding: 20px 12px !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .hero h1 {
+    font-size: 22px !important;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 14px !important;
+  }
+
+  /* Background image center */
+  .hero::before,
+  .hero {
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
+  /* Cards grid */
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Images responsive */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Floating buttons */
+  .float-call,
+  .float-whatsapp {
+    top: auto !important;
+    bottom: 20px !important;
+    transform: none !important;
+  }
+
+  .float-call { left: 10px !important; }
+  .float-whatsapp { right: 10px !important; }
+
+  /* Sections spacing */
+  section {
+    margin: 30px auto !important;
+    padding: 0 12px !important;
+  }
+}
